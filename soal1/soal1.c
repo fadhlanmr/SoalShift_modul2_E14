@@ -47,7 +47,7 @@ int main() {
           if (strstr(&file->d_name[strlen(file->d_name)-5], ".png")) {
             char current[256] = "/home/somi/modul2/soal1/",
                  target[256] = "/home/somi/modul2/gambar/",
-                 filename[256];
+                 filename[256] = "";
             strncpy(filename, file->d_name, strlen(file->d_name)-4);
             strcat(filename, "_grey.png");
             rename(strcat(current, file->d_name), strcat(target, filename));
