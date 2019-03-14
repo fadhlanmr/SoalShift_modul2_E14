@@ -1,2 +1,4 @@
 # SoalShift_modul2_E14
 soal shift modul 2 sisop
+# 1
+Langkah pertama yaitu membuat program daemon yang berjalan tiap 5 detik (`sleep(10);`). Kemudian lakukan iterasi file dalam directory `/home/somi/modul2/soal1/` menggunakan fungsi `readdir();`. Informasi file yang terbaca akan disimpan dalam variabel `struct dirent *file;`. Langkah selanjutnya yaitu periksa apakah file tersebut ber-ekstensi `.png` dengan cara melihat apakah ada substring `".png"` di akhir nama file (`if (strstr(&file->d_name[strlen(file->d_name)-5], ".png"))`). Jika file tersebut ber-ekstensi `.png` maka ambil nama file tersebut tanpa ekstensinya dan simpan kedalam variabel `filename`. Kemudian tambahkan string `"_grey.png"` diakhir `filename`. Langkah terakhir yaitu mengubah nama file sekaligus memindahkannya ke folder `/home/somi/modul2/gambar/` dengan menggunakan fungsi `rename(old, new)`.
